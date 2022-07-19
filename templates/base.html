@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+    .main{
+        min-height: 100vh;
+        height: 100%;
+    }
+</style>
+ <!-- this is the header  -->
+{% include 'snippets/header.html' %}
+{% include 'snippets/basecss.html' %}
+{% include 'snippets/base_js.html' %}
+
+
+<!-- #this is the body -->
+<div class="main">
+    {% block content%}
+    {% endblock content%}
+</div>
+
+
+{% include 'snippets/footer.html' %}
+<script src="{% static 'bootstrap/js/boostrap.bundle.min.js'%}"></script>
+<script src="{% static 'bootstrap/js/jquery.min.js'%}"></script>
+
+</body>
+</html>
